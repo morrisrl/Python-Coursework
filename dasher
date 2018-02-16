@@ -1,0 +1,21 @@
+def dasher(string, lineLength=20):
+    return "-" + "-".join(list(string)) + "-"
+
+#pads a string out to 20 characters with dashes
+def dasher3(string, lineLength=20):
+    if len(string) > lineLength:
+        string = "Error"
+    dashes =(lineLength - len(string))
+
+    half = int(dashes/2)
+    
+    formatted = "-" * half + string + "-" * half
+
+    if (dashes % 2 == 1):
+        formatted += "-"
+    return formatted
+
+
+print(dasher3("Hello", 10))
+print(dasher3("Welcome", 15))
+print(dasher3("Default"))
