@@ -1,0 +1,87 @@
+#Rachel Morris
+#Lab Practical 1
+
+
+import donation
+
+# Section 1 - get all of the donations and output the values
+#200 random donations being stored in a list
+#we want it to print 200 donations, not just 1, using code provided
+
+amount = donation.get_donation()
+print("The donation amounts: ")
+for i in range(201):
+    print(donation.get_donation(), end= " ")
+
+#if I put "amount" in, will give me the same number 200 times, so I used
+ #   donation.get_donation 
+
+# Section 2 - Compute basic categories
+
+count=0
+if sorted_amounts <= 5:
+	count=sorted_amounts.count(5)
+    print("There were ", count, "small donations ($5 or less).")
+
+elif sorted_amounts > 5 and sorted_amounts <= 15:
+	count=sorted_amounts.count(5, 15)
+    print("There were ", sorted_amounts, "medium donations ($6-$15).")
+
+else:
+	count=sorted_amounts.count(16,20)
+    print("There were ", count, "large donations ($16 or more).")
+    
+
+# Section 3 - Compute success or failure
+
+
+print("The total amount of money raised is: $", sum(sorted_amounts))
+goal=2017
+sum(sorted_amounts)=total_amount
+#storing our sum of the sorted_amounts into total_amount for easier use later in the program
+if total_amount >= 2017:
+    print("The fundraising goal was met!")
+else:
+    print("The fundraising goal was not met.")
+
+
+# Section 4 - What can you expect from the bank?
+
+print("The bank cashed this amount out as: ")
+
+#looking to see how many times the total will divide into 100, 20, 5, and 1. We want to maximize the highest number of bills,
+#so we want it to divide into 100 as often as possible, 20, 5, etc, and use the lower numbers as the remainder
+#use if/elif statements and nested statements so that if we still have remainders left over we go down to $1 to get the leftover amount
+
+if total_amount/100=0:
+    print("$100 bills: ", total_amount/100)
+elif total_amount%100 != 0:
+    print("$100 bills: ", total_amount%100)
+    #using mod so we can see what the remainder is, and use that new total to use for the remaining bills
+    new_total = total_amount - total_amount%100
+    #we want change our total to a new total if 100 does not divide evenly into our total_amount so that we can
+    #use the remaining bills
+    if new_total/20=0:
+        print("$20 bills: ", new_total/20)
+    elif new_total%20 != 0:
+        print("$20 bills: ", new_total%20)
+        total_with_twenty= new_total - newtotal%20
+        #new total that incorporates $20 bills so the remaining can be used for the other bills
+        #doing the same here if we still have a remainder and want to continue using the other bills
+        if total_with_twenty/10=0:
+            print("$10 bills: ", total_with_twenty/10)
+        elif total_with_twenty%10 != 0:
+            print("$10 bills: ", total_with_twenty%10)
+            total_with_ten=total_with_twenty - total_with_twenty%10
+            if total_with_ten/5=0:
+                print("$5 bills: ", total_with_ten/5)
+            elif total_with_ten%5 != 0:
+                print("$5 bills: ", total_with_ten%5)
+                total_with_five=total_with_ten - total_with_ten%5
+                #the remaining will be less than 5, so when divided we should get a remainder of 1
+                if total_with_five%5=1:
+                    print("$1 bills: ", total_with_five%5)
+
+            
+    
+    
