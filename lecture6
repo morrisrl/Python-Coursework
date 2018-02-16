@@ -1,0 +1,21 @@
+#Get a string from the user.
+#Get a letter from the user.
+#Start a count at 0.
+#Walk through the string character by character.
+#If the current character is the letter we're looking for
+    #Add 1 to our count.
+#Output the result to the user
+
+string=input("Please enter a string in lowercase. ")
+letter_string=input("What letter are you looking for? ")
+count=0
+
+for letter in string:
+    if letter_string == letter:
+        count=count+1
+        #or count += 1
+        
+print("I found ", letter_string, " ", str(count), "times!")
+
+#for char in string:
+#string.count(letter)
