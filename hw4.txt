@@ -1,0 +1,60 @@
+#Rachel Morris 
+
+#4.13
+
+s = "abcdefghijklmnopqrstuvwxyz"
+
+#a)
+print(s[1:3] == "bc")
+
+#b)
+print(s[:14] == "abcdefghijklmn")
+
+#c)
+print(s[14:] == "opqrstuvwxyz")
+
+#d)
+print(s[1:25] == "bcdefghijklmnopqrstuvw")
+
+    
+#--------------------------------------
+#4.16
+#program that requests three words and prints True if those words are entered
+#in alphabetical order
+    
+first = input("Enter first word. ")
+second = input("Enter second word. ")
+third = input("Enter third word. ")
+
+if first.lower() <= second.lower() <= third.lower():
+    #evaluates alphabetical order/.lower() makes it so that the words
+    #aren't case sensitive if a user enters w/ uppercase
+    print("True")
+else:
+    print()
+
+#---------------------------------------
+#4.20
+#String format expression that uses variables sender, recipient and subject
+
+sender = "time@abc.com"
+recipient = "tom@xyz.org"
+subject = "Hello!"
+print()
+print("From: ", sender, "\nTo: ", recipient, "\nSubject: ", subject)
+    #\n puts the variables on separate lines
+    
+
+#----------------------------------------
+#4.23
+
+def average(): #begin by defining our function with no argument as stated
+    sentence = input("Enter a sentence. ").split() #splits the sentence into individual substrings for each word
+    count = 0 #start our count at 0
+    for word in sentence:
+        count += len(word) #counts individual characters and adds it to our count
+        averageLen = count / len(list(sentence)) #average is based on no. of characters divided by the length of
+                                                 #each word in the sentence
+        print("The average length of a word in that sentence is ",averageLen)
+        return count
+    average()
